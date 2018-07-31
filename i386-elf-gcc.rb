@@ -1,4 +1,5 @@
 require 'formula'
+require 'formulary'
 
 class I386ElfGcc < Formula
   homepage 'http://gcc.gnu.org'
@@ -13,7 +14,7 @@ class I386ElfGcc < Formula
   depends_on 'i386-elf-binutils'
 
   def install
-    binutils = Formula.factory 'i386-elf-binutils'
+    binutils = Formulary.factory 'i386-elf-binutils'
 
     ENV['CC'] = '/usr/local/bin/gcc-4.9'
     ENV['CXX'] = '/usr/local/bin/g++-4.9'
